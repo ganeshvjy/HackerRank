@@ -1,0 +1,30 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+import java.util.Scanner;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        int N;
+        Scanner sc = new Scanner(System.in);
+        
+        N = sc.nextInt();
+        
+        for(int i=0;i<N;i++){
+            int Val = sc.nextInt();
+            long res=0;
+            if(Val%2==0){
+                res = Val/2;
+                System.out.println(res*res);
+            }else{
+                Val+=1;
+                res = Val/2;
+                System.out.println(res * (res-1));
+            }
+            
+        }
+    }
+}
