@@ -1,0 +1,31 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    // Multiples of 3 and 5 
+    int inCount;
+    long input;
+    long trace;
+    long divide;
+    int result=0;
+    cin>>inCount;
+    
+    while(inCount!=0){
+        cin>>input;
+        trace = input;
+        while(trace > 0){
+            divide = trace%10;
+            if((divide > 0) && ((input % divide)==0)){ result++;}
+            trace = trace/10;
+        }
+        cout<<result<<endl;
+        result =0;
+        inCount--;
+    }
+    return 0;
+}
