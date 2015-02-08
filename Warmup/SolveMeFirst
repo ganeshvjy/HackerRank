@@ -1,0 +1,31 @@
+//
+This is an introductory challenge. The purpose of this challenge is to give you a working I/O template in your 
+preferred language. It includes scanning 2 integers from STDIN, calling a function, returning a value, and printing 
+it to STDOUT.
+
+The task is to scan two numbers from STDIN, and print the sum A+B on STDOUT. The code has already been provided for 
+most of the popular languages. This is primarily for you to read and inspect how the IO is handled.
+
+Note: The code has been saved in a template, which you can submit if you want. Or, you may try rewriting it and 
+building it up from scratch.
+//
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int solveMeFirst(int a, int b) {
+  return a+b;
+}
+int main() {
+  int num1, num2;
+  int sum;
+  cin>>num1>>num2;
+  sum = solveMeFirst(num1,num2);
+  cout<<sum;
+  return 0;
+}
