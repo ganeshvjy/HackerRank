@@ -1,0 +1,34 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Solution
+    {
+    public static void main(String args[])
+        {
+        Scanner sc=new Scanner(System.in);
+        int T;
+        T=sc.nextInt();
+        String s[]=new String[T];
+        for(int i=0;i<T;i++)
+            {
+            s[i]=sc.next();
+           // stringBuffer sb[i]=new stringBuffer(s[i]);
+        int l,k;
+            l=0; k=s[i].length()-1; int sum=0;
+            while(l!=k&&l<=k)
+            {
+         
+                int d = (int)(s[i].charAt(l));
+                int e =(int)(s[i].charAt(k));
+                int c = Math.abs(d-e);
+                
+                sum=sum+c;
+                l++; k--;
+                
+            }
+            System.out.println(sum);
+            
+        
+        }
+    }
+}
