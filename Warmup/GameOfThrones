@@ -1,0 +1,43 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner myScan = new Scanner(System.in);
+        String inputString = myScan.nextLine();
+        Map<Character, Integer> myMap = new HashMap<Character, Integer>();
+           
+        String ans;
+        
+        for(int iter=0;iter<inputString.length();iter++){
+            myMap.put(inputString.charAt(iter),0);
+        }
+        
+        for(int iter=0;iter<inputString.length();iter++){
+            int Val = myMap.get(inputString.charAt(iter));
+            ++Val;
+            myMap.put(inputString.charAt(iter),Val);
+        }
+        
+        int res=0;
+        for(int test:myMap.values()){
+            if(test%2!=0){
+                res++;
+            }
+        }
+        
+        
+        if(res > 1){
+            ans ="NO";
+        }else{
+            ans="YES";
+        }
+        
+        System.out.println(ans);
+        myScan.close();
+    }
+}
