@@ -1,0 +1,43 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    static final Scanner scan = new Scanner(System.in);
+    
+    public static void main(String[] args) {
+        /* To print absolute difference between the two sums of the matrix's diagonals */
+
+        int N;
+        N = scan.nextInt();
+        
+        switch(N){
+            case 0: System.out.println("Cannot process this problem!");
+            case 1: System.out.println(scan.nextInt());
+            default: 
+                   diagonalSum(N);
+        }
+        
+        scan.close();        
+    }
+    
+    public static void diagonalSum(int n){
+        
+        int [][] arrayIn = new int [n][n];  
+        int s1=0;
+        int s2=0;
+        
+        // process the diagonal sum
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+               arrayIn[i][j]= scan.nextInt(); 
+                if(i==j){s1+=arrayIn[i][j];}
+            }
+            s2+=arrayIn[i][n-i-1];
+        }
+
+        System.out.println(Math.abs(s1-s2));
+
+        
+    }
+}
