@@ -1,0 +1,24 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* To Print a staircase of height NN that consists of # symbols and spaces.*/
+        
+        Scanner scan = new Scanner(System.in);
+        
+        int N = scan.nextInt();
+        int temp = N;
+        for(int i =0;i<N;i++){
+            for(int j=0;j<N;j++){
+                if(j>=temp-1){System.out.print("#");}
+                else System.out.print(" ");
+            }
+            System.out.println();
+            temp--;
+        }
+        
+        
+    }
+}
